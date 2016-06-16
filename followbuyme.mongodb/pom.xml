@@ -4,11 +4,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>com.buildingbook</groupId>
-  <artifactId>buildingbook.mongodb</artifactId>
+  <groupId>com.followbuyme</groupId>
+  <artifactId>followbuyme.mongodb</artifactId>
   <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>buildingbook.mongodb</name>
+  <name>followbuyme.mongodb</name>
   
   <dependencies>
   
@@ -47,7 +47,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
  </dependencies>
  <build>
-  <finalName>buildingbook.mongodb</finalName>
+  <finalName>followbuyme.mongodb</finalName>
   <plugins>
    <plugin>
     <artifactId>maven-compiler-plugin</artifactId>

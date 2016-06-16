@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.followbuyme</groupId>
+    <artifactId>followbuymeParent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>followbuymeEAR</artifactId>
+  <packaging>ear</packaging>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.followbuyme</groupId>
+  		<artifactId>followbuyme.base</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.followbuyme</groupId>
+  		<artifactId>followbuyme.mongodb</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.followbuyme</groupId>
+  		<artifactId>followbuyme.web</artifactId>
+  		<version>1.0-SNAPSHOT</version>
+  		<type>war</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.followbuyme</groupId>
+  		<artifactId>followbuymeParent</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  		<type>pom</type>
+  	</dependency>
+  </dependencies>
+</project>

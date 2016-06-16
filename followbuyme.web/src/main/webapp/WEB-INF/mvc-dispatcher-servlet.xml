@@ -9,7 +9,8 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
-	<context:component-scan base-package="com.buildingbook" />
+    <import resource="classpath*:/spring-beans.xml" />
+	<context:component-scan base-package="com.threemusketeers.followbuyme,com.followbuyme" />
 
 	<mvc:annotation-driven />
 
@@ -27,7 +28,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/building" />
 		<property name="username" value="root" />
-		<property name="password" value="admin" />
+		<property name="password" value="root123" />
 	</bean>
 
 	<bean id="sessionFactory"
@@ -35,15 +36,15 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.followbuyme.building.base.model.Base</value>
-				<value>com.followbuyme.building.contact.model.Address</value>
-				<value>com.followbuyme.building.contact.model.ContactDetails</value>
-				<value>com.followbuyme.building.contact.model.Phone</value>
-				<value>com.followbuyme.building.document.model.Document</value>
-				<value>com.followbuyme.building.person.model.BuildingContractor</value>
-				<value>com.followbuyme.building.person.model.Customer</value>
-				<value>com.followbuyme.building.person.model.Person</value>
-				<value>com.followbuyme.building.project.model.BuildingProject</value>
+				<value>com.threemusketeers.followbuyme.base.model.Base</value>
+				<value>com.threemusketeers.followbuyme.contact.model.Address</value>
+				<value>com.threemusketeers.followbuyme.contact.model.ContactDetails</value>
+				<value>com.threemusketeers.followbuyme.contact.model.Phone</value>
+				<value>com.threemusketeers.followbuyme.document.model.Document</value>
+				<value>com.threemusketeers.followbuyme.person.model.BuildingContractor</value>
+				<value>com.threemusketeers.followbuyme.person.model.Customer</value>
+				<value>com.threemusketeers.followbuyme.person.model.Person</value>
+				<value>com.followbuyme.project.model.BuildingProject</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -65,11 +66,11 @@
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
 	<bean id="contactService" class="com.followbuyme.contact.service.ContactServiceImpl"></bean>
-	<bean id="contactDetailsBO" class="com.followbuyme.building.contact.bo.impl.ContactDetilsBOImpl"></bean>
-	<bean id="contactDetailsDAO" class="com.followbuyme.building.contact.dao.impl.ContactDetailsDAOImpl"></bean>
+	<bean id="contactDetailsBO" class="com.threemusketeers.followbuyme.contact.bo.impl.ContactDetilsBOImpl"></bean>
+	<bean id="contactDetailsDAO" class="com.threemusketeers.followbuyme.contact.dao.impl.ContactDetailsDAOImpl"></bean>
 	<bean id="projectService" class="com.followbuyme.project.service.ProjectServiceImpl"></bean>
-	<bean id="buildingProjectBO" class="com.followbuyme.building.project.bo.impl.BuildingProjectBOImpl"></bean>
-	<bean id="buildingProjectDAO" class="com.followbuyme.building.project.dao.impl.BuildingProjectDAOImpl"></bean>
+	<bean id="buildingProjectBO" class="com.threemusketeers.followbuyme.project.bo.impl.BuildingProjectBOImpl"></bean>
+	<bean id="buildingProjectDAO" class="com.threemusketeers.followbuyme.project.dao.impl.BuildingProjectDAOImpl"></bean>
 	
 
 </beans>
